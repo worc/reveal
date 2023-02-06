@@ -1,0 +1,20 @@
+{
+  "manifest_version": 3,
+  "name": "Reveal",
+  "description": "Reveal passwords with a hotkey",
+  "version": "0.0.0",
+  "action": {
+    "default_popup": "reveal.html",
+    "default_icon": "reveal.png"
+  },
+  "content_scripts": [
+    {
+      "js": ["content.js"],
+      "matches": [
+        "https://*/*",
+        "http://*/*"
+      ],
+      "run_at": "document_end"
+    }
+  ]
+}
